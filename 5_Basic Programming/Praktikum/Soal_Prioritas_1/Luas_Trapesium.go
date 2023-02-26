@@ -17,5 +17,5 @@ func main() {
     luas := 0.5 * (sisiAtas + sisiBawah) * tinggi
 
     // Tampilkan hasil perhitungan
-    fmt.Println("Luas trapesium adalah:", luas)
+    fmt.Println("Luas trapesium adalah:", luas )
 }
