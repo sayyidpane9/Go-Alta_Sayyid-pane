@@ -1,0 +1,9 @@
+
+Penjelasan Pemrograman :
+
+Program ini menghitung selisih mutlak antara jumlah diagonal dari sebuah matriks persegi. Pertama-tama, 
+program menginisialisasi variabel "sumLeft" dan "sumRight" untuk menyimpan jumlah diagonal kiri 
+ke kanan dan kanan ke kiri, masing-masing. Kemudian program melakukan loop dua kali untuk menghitung jumlah 
+diagonal. Loop pertama menghitung jumlah diagonal dari kiri ke kanan, dan loop kedua menghitung jumlah diagonal 
+dari kanan ke kiri. Setelah itu, program menghitung selisih mutlak antara kedua diagonal dengan menggunakan 
+fungsi "Abs" dari package "math". Akhirnya, program mengembalikan nilai selisih mutlak tersebut.

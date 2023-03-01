@@ -1,0 +1,15 @@
+
+Penjelasan program:
+
+1. Fungsi "Mapping" 
+    mengambil satu argumen, yaitu slice slice yang ingin dihitung kemunculannya.
+2. Fungsi "Mapping" 
+    membuat sebuah map dengan tipe map[string]int menggunakan fungsi make. Map ini akan digunakan untuk menyimpan 
+    jumlah kemunculan tiap string dalam slice.
+3. Dalam loop "for", 
+    setiap elemen dalam slice akan diproses. Jika elemen tersebut belum ada di map, maka akan ditambahkan dengan 
+    nilai awal 0. Kemudian, nilai untuk elemen tersebut akan diincrement.
+4. Fungsi "Mapping" 
+    mengembalikan map dengan jumlah kemunculan tiap string.
+5. Dalam fungsi "main", 
+    beberapa slice contoh dan hasil dari pemanggilan fungsi Mapping dicetak ke layar.

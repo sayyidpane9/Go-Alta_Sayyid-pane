@@ -1,0 +1,19 @@
+
+Penjelasan program :
+
+Pada program "ArrayMerge", kita mendefinisikan sebuah fungsi ArrayMerge untuk menggabungkan dua array dan 
+menghindari duplikasi nama. Fungsi ini memiliki dua parameter yaitu "arrayA" dan "arrayB", yang merupakan dua 
+array yang akan digabungkan.
+
+Di dalam fungsi "ArrayMerge", kita menggunakan map "existingNames" dan "slice result" seperti pada program 
+sebelumnya untuk menyimpan nama-nama yang sudah ada dan hasil gabungan.
+
+Kemudian, kita melakukan iterasi pada array pertama "arrayA" dan menambahkan setiap nama yang belum ada 
+ke dalam map "existingNames" dan "slice result". Hal ini dilakukan dengan menggunakan perintah 
+"if !existingNames[name]" untuk memeriksa apakah nama tersebut belum ada di dalam map "existingNames".
+
+Setelah itu, kita melakukan hal yang sama pada array kedua "arrayB", dan menambahkan setiap nama yang belum 
+ada ke dalam map "existingNames" dan "slice result".
+
+Akhirnya, kita mengembalikan hasil gabungan dari fungsi "ArrayMerge" dan menampilkannya di dalam 
+fungsi "main" menggunakan perintah "fmt.Println(result)".

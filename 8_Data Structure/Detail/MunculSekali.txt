@@ -1,0 +1,28 @@
+
+Penjelasan program :
+
+1. Fungsi "munculSekali" 
+    menerima satu argumen, yaitu sebuah string "angka" yang berisi kumpulan angka.
+
+2. Fungsi "munculSekali" 
+    membuat sebuah map dengan tipe "map[int]int" menggunakan fungsi make. Map ini akan digunakan untuk 
+    menyimpan jumlah kemunculan tiap digit dalam angka.
+
+3. Dalam loop "for", setiap digit dalam angka akan diproses. 
+    Digit tersebut akan diubah menjadi integer menggunakan fungsi "strconv.Atoi", 
+    kemudian jumlah kemunculan digit tersebut diincrement dalam map.
+
+4. Setelah selesai menghitung kemunculan tiap digit, fungsi "munculSekali" 
+    membuat sebuah slice kosong "result" yang akan digunakan untuk menyimpan 
+    angka yang hanya muncul satu kali.
+
+5. Dalam loop "for", 
+    setiap digit dan jumlah kemunculannya dalam map akan diproses. 
+    Jika jumlah kemunculan digit tersebut sama dengan 1, 
+    maka digit tersebut akan ditambahkan ke dalam slice "result".
+
+6. Fungsi "munculSekali" 
+    mengembalikan slice "result" yang berisi angka yang hanya muncul satu kali dalam angka input.
+
+7. Dalam fungsi "main", 
+    beberapa contoh input dan output dari fungsi "munculSekali" dicetak ke layar.

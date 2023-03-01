@@ -1,0 +1,25 @@
+
+Penjelasan programan : 
+
+Kode tersebut merupakan implementasi dari fungsi PairSum yang menerima dua parameter, yaitu sebuah slice 
+bilangan bulat (arr) dan sebuah bilangan bulat target. Tujuan dari fungsi ini adalah untuk mencari pasangan 
+bilangan dari slice tersebut yang ketika dijumlahkan menghasilkan bilangan yang sama dengan target.
+
+Pertama-tama, fungsi ini membuat sebuah map (numMap) yang akan digunakan untuk menyimpan nilai dan indeks dari 
+bilangan yang sudah dilihat saat melakukan iterasi pada slice arr. Selanjutnya, fungsi akan melakukan iterasi 
+pada slice arr menggunakan for loop.
+
+Dalam setiap iterasi, fungsi akan menghitung selisih (complement) antara target dan nilai saat ini (num). 
+Kemudian, fungsi akan memeriksa apakah selisih tersebut sudah ada di dalam map menggunakan 
+perintah if _, ok := numMap[complement]; ok {}. Jika sudah ada, berarti pasangan bilangan yang dicari sudah 
+ditemukan. Fungsi akan mengembalikan sebuah slice yang berisi indeks dari bilangan pasangan tersebut, 
+yaitu []int{numMap[complement], i}.
+
+Jika selisih belum ada di map, maka bilangan saat ini akan ditambahkan ke map dengan nilai sebagai kunci dan 
+indeks sebagai nilai. Hal ini dilakukan agar dapat melakukan pencarian bilangan pasangan di iterasi selanjutnya.
+
+Jika setelah iterasi dilakukan tetapi pasangan bilangan yang sesuai dengan target tidak ditemukan,
+fungsi akan mengembalikan sebuah slice kosong ([]int{}).
+
+Pada fungsi main, terdapat beberapa contoh pemanggilan fungsi PairSum dengan beberapa parameter yang berbeda 
+untuk menunjukkan bagaimana cara penggunaan dari fungsi tersebut.
