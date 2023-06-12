@@ -137,9 +137,36 @@ JOIN users u ON t.user_id = u.id;
 
 -- 6. Buat function setelah data transaksi dihapus maka transaction detail terhapus juga 
 --    dengan transaction id yang dimaksud.
+DELIMITER $$
+CREATE FUNCTION delete_transaction_detail_trigger() RETURNS TRIGGER
+BEGIN
+   DELETE FROM transaction_details
+   WHERE transaction_id = OLD.transaction_id;
+   RETURN OLD;
+END $$
+DELIMITER ;
+
+CREATE TRIGGER delete_transaction_detail
+AFTER DELETE ON transactions
+FOR EACH ROW
+CALL delete_transaction_detail_trigger();
 
 --7. Buat function setelah data transaksi detail dihapus maka data total_qty terupdate 
 --   berdasarkan qty data transaction id yang dihapus.
+DELIMITER $$
+CREATE FUNCTION update_total_qty_trigger() RETURNS TRIGGER
+BEGIN
+   UPDATE transactions
+   SET total_quantity = total_quantity - OLD.total_quantity
+   WHERE id = OLD.id;
+   RETURN OLD;
+END;
+DELIMITER ;
+
+CREATE TRIGGER update_total_qty
+AFTER DELETE ON transaction_details
+FOR EACH ROW
+CALL update_total_qty_trigger();
 
 -- 8. Tampilkan data products yang tidak pernah ada di tabel transaction_details dengan sub-query.
 SELECT * FROM products WHERE id NOT IN (
